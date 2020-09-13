@@ -27,6 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 800px;
+
 }
 
 h1 {
@@ -52,4 +53,22 @@ h1 {
 
 .countdown-el span {
     font-size: 1.3rem;
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        max-width: 350px;
+    }
+
+    .big-text {
+        font-size: 20px;
+    }
+
+    .countdown-el span {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
 }
