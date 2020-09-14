@@ -3,9 +3,17 @@ const daysEl = document.querySelector('#days');
 const hoursEl = document.querySelector('#hours');
 const minsEl = document.querySelector('#mins');
 const secondsEl = document.querySelector('#seconds');
+const oldEl = document.querySelector('#old');
 
 function generateCurrentYear() {
     nextBirthday += new Date().getFullYear();
+}
+
+function getYearsOld() {
+    const born = new Date('12 Feb 1998');
+    const ageDiff = Date.now() - born;
+    const ageDate = new Date(ageDiff);
+    oldEl.innerHTML = Math.abs(ageDate.getUTCFullYear() - 1970) + ' y.o.';
 }
 
 function checkTimeToBirthday() {
@@ -43,4 +51,5 @@ function countdown() {
 
 generateCurrentYear();
 checkTimeToBirthday();
+getYearsOld();
 setInterval(countdown, 1000);
